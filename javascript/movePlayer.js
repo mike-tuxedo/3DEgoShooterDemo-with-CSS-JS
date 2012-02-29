@@ -54,7 +54,7 @@ $(document).ready(function(){
 			s = setInterval('collisionDetection()', 10);
 		}
     else if(event.which == 32){
-      if((placeX < 400 && placeX > -400) && placeZ > 4800)
+      if(map[mapZ+1][mapX] == 2 || map[mapZ-1][mapX] == 2 || map[mapZ][mapX+1] == 2 || map[mapZ][mapX-1] == 2)
         openDoor(1);
     }
 	});
@@ -120,7 +120,8 @@ function showValues(){
 
 //collisiondetection
 function collisionDetection(){
-  mapX = parseInt((placeX + stepsInX)/100+10);
+  //the + 30 in mapX is the offset to take the collisionmap on the right place
+  mapX = parseInt((placeX + stepsInX)/100+30);
   mapZ = parseInt((placeZ + stepsInZ-3000)/100);
   
   //check if player moves into a wall
