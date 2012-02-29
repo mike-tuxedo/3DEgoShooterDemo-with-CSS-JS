@@ -1,0 +1,55 @@
+var t;
+var s;
+var grad = 0;
+var step = 0;
+var rotationVal = 0;
+var moveVal = 0;
+var cnt = 0;
+
+$(document).ready(function(){
+	$(document).keydown(function(event){
+		if(event.which == 37){
+			clearInterval(t);
+			grad = -1;
+			t = setInterval('rotation()', 10);
+		}
+		else if(event.which == 39){
+			clearInterval(t);
+			grad = 1;
+			t = setInterval('rotation()', 10);
+		}
+		else if(event.which == 38){
+			clearInterval(s);
+			step = 1;
+			s = setInterval('move()', 10);		
+		}
+		else if(event.which == 40){
+			clearInterval(s);
+			step = -5;
+			s = setInterval('move()', 10);		
+		}
+	});
+
+	$(document).keyup(function(event){
+		clearInterval(t);
+		clearInterval(s);
+	});
+});
+
+function rotation()
+{
+	cnt += 1;
+	rotationVal += grad;
+	$('#level1').css('-webkit-transform', 'rotateY(' + rotationVal + 'deg)');
+}
+
+function move()
+{
+	$('#bord').html('translateZ vom Level<p>' + moveVal + '</p>');
+	cnt += 1;
+	moveVal += step;
+	$('#level1').css('-webkit-transform', 'translateZ(' + moveVal + 'px)');
+}
+
+
+

@@ -1,0 +1,21 @@
+Dieses Projekt ist geistliches Eigentum von Tiefenthaler Michael
+
+Description:
+Ich versuche mithilfe der noch in der Entwicklung befindlichen CSS3D
+Eigenschaften und Javascript, einen 3D Egoshooter zu realisieren. Vorlage
+ist hierbei das aus den 90ern bekannte Wolfenstein3D. Die teilweise Rechts-
+extremen Inhalte/Texturen werden nicht Kopiert, lediglich der Grundaufbau
+der Levels und die Spielphysik soll möglichst gut nachgeahmt werden.
+
+Das Projekt wird vorerst nur auf Google-Chrome laufen, um den Code überschau-
+bar zu halten und amit die Entwicklung schneller vorran geht. Da der 3D-Support
+noch nicht Standard ist verwendet jeder Browser eigene Vendor-Präfixe verwendet 
+und das Optimieren auf mehreren Browsern würde zu viel Zeit in anspruch nehmen
+und den Codeumfang vervielfachen!
+
+Verwendung:
+Um redundante CSS-Snippes zu vermeiden und dadurch mehr Übersicht zu bekommen
+wird die Less-Bibliothek verwendet. Hat Chrome Probleme mit Less, muss in diesem 
+Fall Chrome mit der Option: 
+-allow-file-access-from-files
+gerstartet werden.

@@ -1,0 +1,442 @@
+body{
+}
+
+html{
+	height: 100%;
+	overflow: hidden;
+}
+
+#bord{
+	position: fixed;
+	width: auto;
+  background-color: rgba(0,0,0,0.75);
+  padding: 15px;
+  color: #fdfdfd;
+	font-size: 50px;
+  font-family: Arial;
+  z-index: 1000;
+}
+
+#top{
+position: fixed;
+background: #333333;
+width: 100%;
+height: 50%;
+}
+
+#floor{
+position: fixed;
+background: #888888;
+width: 100%;
+height: 50%;
+top: 50%;
+}
+
+#game {
+	//background-color: rgba(0,0,0,0.5);
+  position:absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+  text-align: center;
+
+  -webkit-perspective: 3000px;
+}
+
+#level1 {border: 2px solid green;
+	position: relative;
+	margin: 700px 50%;
+  height: 1px;
+	width: 1px;
+
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50% 3000px;
+  -webkit-transform: translateZ(3100px);
+}
+
+/** --------------------------WallsHelpers------------------------------------ **/
+
+.wallLeftStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(90deg) translateZ(-1050px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallRightStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(270deg) translateZ(-950px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallFrontStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(0px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallBackStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(-2000px) translateX(@translateX);
+  position: fixed;
+}
+//----------------------------Raum1 links
+#l1 {
+  .wallLeftStandartValues(50px);
+}
+
+#l2 {
+  .wallLeftStandartValues(150px);
+}
+
+#l3 {
+  .wallLeftStandartValues(250px);
+}
+
+#l4 {
+  .wallLeftStandartValues(350px);
+}
+
+#l5 {
+  .wallLeftStandartValues(450px);
+}
+
+#l6 {
+  .wallLeftStandartValues(550px);
+}
+
+#l7 {
+  .wallLeftStandartValues(650px);
+}
+
+#l8 {
+  .wallLeftStandartValues(750px);
+}
+
+#l9 {
+  .wallLeftStandartValues(850px);
+}
+
+#l10 {
+  .wallLeftStandartValues(950px);
+}
+
+#l11 {
+  .wallLeftStandartValues(1050px);
+}
+
+#l12 {
+  .wallLeftStandartValues(1150px);
+}
+
+#l13 {
+  .wallLeftStandartValues(1250px);
+}
+
+#l14 {
+  .wallLeftStandartValues(1350px);
+}
+
+#l15 {
+  .wallLeftStandartValues(1450px);
+}
+
+#l16 {
+  .wallLeftStandartValues(1550px);
+}
+
+#l17 {
+  .wallLeftStandartValues(1650px);
+}
+
+#l18 {
+  .wallLeftStandartValues(1750px);
+}
+
+#l19 {
+  .wallLeftStandartValues(1850px);
+}
+
+#l20 {
+  .wallLeftStandartValues(1950px);
+}
+
+//----------------------------Raum1 hinten
+
+#b1 {
+  .wallBackStandartValues(-1000px);
+}
+
+#b2 {
+  .wallBackStandartValues(-900px);
+}
+
+#b3 {
+  .wallBackStandartValues(-800px);
+}
+
+#b4 {
+  .wallBackStandartValues(-700px);
+}
+
+#b5 {
+  .wallBackStandartValues(-600px);
+}
+
+#b6 {
+  .wallBackStandartValues(-500px);
+}
+
+#b7 {
+  .wallBackStandartValues(-400px);
+  height: 140px;
+}
+
+#b8 {
+  .wallBackStandartValues(-300px);
+  height: 140px;
+}
+
+#b9 {
+  .wallBackStandartValues(-200px);
+  height: 140px;
+}
+
+#b10 {
+  .wallBackStandartValues(-100px);
+  height: 140px;
+}
+
+#b11 {
+  .wallBackStandartValues(0px);
+  height: 140px;
+}
+
+#b12 {
+  .wallBackStandartValues(100px);
+  height: 140px;
+}
+
+#b13 {
+  .wallBackStandartValues(200px);
+  height: 140px;
+}
+
+#b14 {
+  .wallBackStandartValues(300px);
+  height: 140px;
+}
+
+#b15 {
+  .wallBackStandartValues(400px);
+}
+
+#b16 {
+  .wallBackStandartValues(500px);
+}
+
+#b17 {
+  .wallBackStandartValues(600px);
+}
+
+#b18 {
+  .wallBackStandartValues(700px);
+}
+
+#b19 {
+  .wallBackStandartValues(800px);
+}
+
+#b20 {
+  .wallBackStandartValues(900px);
+}
+
+
+//----------------------------Raum1 vorne
+
+#f1 {
+  .wallFrontStandartValues(-1000px);
+}
+
+#f2 {
+  .wallFrontStandartValues(-900px);
+}
+
+#f3 {
+  .wallFrontStandartValues(-800px);
+}
+
+#f4 {
+  .wallFrontStandartValues(-700px);
+}
+
+#f5 {
+  .wallFrontStandartValues(-600px);
+}
+
+#f6 {
+  .wallFrontStandartValues(-500px);
+}
+
+#f7 {
+  .wallFrontStandartValues(-400px);
+}
+
+#f8 {
+  .wallFrontStandartValues(-300px);
+}
+
+#f9 {
+  .wallFrontStandartValues(-200px);
+}
+
+#f10 {
+  .wallFrontStandartValues(-100px);
+}
+
+#f11 {
+  .wallFrontStandartValues(0px);
+}
+
+#f12 {
+  .wallFrontStandartValues(100px);
+}
+
+#f13 {
+  .wallFrontStandartValues(200px);
+}
+
+#f14 {
+  .wallFrontStandartValues(300px);
+}
+
+#f15 {
+  .wallFrontStandartValues(400px);
+}
+
+#f16 {
+  .wallFrontStandartValues(500px);
+}
+
+#f17 {
+  .wallFrontStandartValues(600px);
+}
+
+#f18 {
+  .wallFrontStandartValues(700px);
+}
+
+#f19 {
+  .wallFrontStandartValues(800px);
+}
+
+#f20 {
+  .wallFrontStandartValues(900px);
+}
+//----------------------------Raum1 rechts
+#r1 {
+  .wallRightStandartValues(-50px);
+}
+
+#r2 {
+  .wallRightStandartValues(-150px);
+}
+
+#r3 {
+  .wallRightStandartValues(-250px);
+}
+
+#r4 {
+  .wallRightStandartValues(-350px);
+}
+
+#r5 {
+  .wallRightStandartValues(-450px);
+}
+
+#r6 {
+  .wallRightStandartValues(-550px);
+}
+
+#r7 {
+  .wallRightStandartValues(-650px);
+}
+
+#r8 {
+  .wallRightStandartValues(-750px);
+}
+
+#r9 {
+  .wallRightStandartValues(-850px);
+}
+
+#r10 {
+  .wallRightStandartValues(-950px);
+}
+
+#r11 {
+  .wallRightStandartValues(-1050px);
+}
+
+#r12 {
+  .wallRightStandartValues(-1150px);
+}
+
+#r13 {
+  .wallRightStandartValues(-1250px);
+}
+
+#r14 {
+  .wallRightStandartValues(-1350px);
+}
+
+#r15 {
+  .wallRightStandartValues(-1450px);
+}
+
+#r16 {
+  .wallRightStandartValues(-1550px);
+}
+
+#r17 {
+  .wallRightStandartValues(-1650px);
+}
+
+#r18 {
+  .wallRightStandartValues(-1750px);
+}
+
+#r19 {
+  .wallRightStandartValues(-1850px);
+}
+
+#r20 {
+  .wallRightStandartValues(-1950px);
+}
+
+//-----------------------------door
+
+#door1{
+  position: fixed;
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(-2001px) translateX(-400px);
+  background-image: url(../images/door.png);
+  width: 800px;
+  height: 1000px;
+}

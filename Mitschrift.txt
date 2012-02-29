@@ -1,0 +1,8 @@
+Quellen usw.: Um den CSS-Code möglichst klein zu halten verwende ich "Less".
+              Chrome muss mit der option "-allow-file-access-from-files" gestartet werden, da sonst Less nicht funktioniert.
+              
+
+Probleme: Das Level soll sich um den Spieler(Kamera) drehen. Das ist nicht einfach!!
+          Durch die perspective: 1000px; Propertie, die den 3D-Effekt visuallisiert, ist der Player 1000px
+          weit vom Drehpunkt entfernt. Um das zu ändern/korrigieren wird irgend ein Trick notwendig sein.
+          http://www.w3.org/TR/css3-3d-transforms/#transform-functions, da gibts transform-origin.

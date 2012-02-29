@@ -1,0 +1,91 @@
+body{
+}
+
+html{
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#989898));
+	background: -moz-linear-gradient(top,  #fdfdfd,  #989898);
+	height: 100%;
+	overflow: hidden;
+}
+
+#bord{
+	position: absolute;
+	margin: 50px 50%;
+	left: -250px;	
+	width: 500px;
+	font-size: 100px;
+}
+
+#game {
+	border: 2px solid yellow;
+	background-color: rgba(0,0,0,0.5);
+  position:absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+  text-align: center;
+
+  -webkit-perspective: 500px;
+}
+
+#level1 {border: 2px solid green;
+	position: relative;
+	margin: 1200px auto;
+  height: 600px;
+	width: 600px;
+	background-color: rgba(200,200,200,0.5);
+
+  -webkit-transform-style: preserve-3d;
+}
+
+
+#l1 {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform:  rotateY(90deg) translateZ(-300px) translateX(100px);
+	background-image: url(../images/wall2.png);
+  color: white;
+	width: 100px;
+	height: 600px;
+}
+
+#l2 {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform:  rotateY(90deg) translateZ(-300px) translateX(200px);
+	background-image: url(../images/wall2.png);
+  color: white;
+	width: 100px;
+	height: 600px;
+}
+
+#l3 {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform:  rotateY(90deg) translateZ(-300px) translateX(300px);
+	background-image: url(../images/wall2.png);
+  color: white;
+	width: 100px;
+	height: 600px;
+}
+
+#v1 {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform:  translateZ(-300px) translateX(-250px);
+	background-image: url(../images/wall2.png);
+  color: white;
+	width: 100px;
+	height: 600px;
+}
+
+#r1 {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform:  rotateY(270deg) translateZ(-500px);
+  background-color: black;
+  color: white;
+width: 100%;
+height: 100%;
+}
