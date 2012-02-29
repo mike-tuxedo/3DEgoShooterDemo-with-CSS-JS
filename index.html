@@ -4,9 +4,15 @@
 		<meta charset="UTF-8"><title>Wolfenstein3D CSS3 Demo</title>
 
     <link rel="stylesheet/less" href="css/styles.less" />
+    <link rel="stylesheet/less" href="css/room1.less" />
+    <link rel="stylesheet/less" href="css/room3.less" />
+    <link rel="stylesheet/less" href="css/room4.less" />
+    
     <script type="text/javascript" src="javascript/less-1.2.1.min.js"></script>
 		<script type="text/javascript" src="javascript/jquery-1.6.1.min.js"></script>
 		<script type="text/javascript" src="javascript/jquery.easing.1.3.js"></script>
+    
+		<script type="text/javascript" src="javascript/collisionMap.js"></script>
 		<script type="text/javascript" src="javascript/movePlayer.js"></script>
 		<script type="text/javascript" src="javascript/openDoor.js"></script>
 
@@ -18,6 +24,8 @@
       <div id="game">
         <div id="level1">
           <div id="door1"></div>
+          
+          <!-- room1 -->
           <div id="l1"></div>
           <div id="l2"></div>
           <div id="l3"></div>
@@ -98,6 +106,255 @@
           <div id="b18"></div>
           <div id="b19"></div>
           <div id="b20"></div>
+          
+          <!-- room2 -->
+          <div id="l21"></div>
+          <div id="l22"></div>
+          <div id="l23"></div>
+          <div id="l24"></div>
+          <div id="l25"></div>
+          <div id="l26"></div>
+          <div id="l27"></div>
+          <div id="l28"></div>
+          <div id="l29"></div>
+          <div id="l210"></div>
+          <div id="l211"></div>
+          <div id="l212"></div>
+          <div id="l213"></div>
+          <div id="l214"></div>
+          <div id="l215"></div>
+          <div id="l216"></div>
+          <div id="l217"></div>
+          <div id="l218"></div>
+          <div id="l219"></div>
+          <div id="l220"></div>
+          <div id="r21"></div>
+          <div id="r22"></div>
+          <div id="r23"></div>
+          <div id="r24"></div>
+          <div id="r25"></div>
+          <div id="r26"></div>
+          <div id="r27"></div>
+          <div id="r28"></div>
+          <div id="r29"></div>
+          <div id="r210"></div>
+          <div id="r211"></div>
+          <div id="r212"></div>
+          <div id="r213"></div>
+          <div id="r214"></div>
+          <div id="r215"></div>
+          <div id="r216"></div>
+          <div id="r217"></div>
+          <div id="r218"></div>
+          <div id="r219"></div>
+          <div id="r220"></div>
+          <div id="f21"></div>
+          <div id="f22"></div>
+          <div id="f23"></div>
+          <div id="f24"></div>
+          <div id="f25"></div>
+          <div id="f26"></div>
+          <div id="f27"></div>
+          <div id="f28"></div>
+          <div id="f29"></div>
+          <div id="f210"></div>
+          <div id="f211"></div>
+          <div id="f212"></div>
+          <div id="f213"></div>
+          <div id="f214"></div>
+          <div id="f215"></div>
+          <div id="f216"></div>
+          <div id="f217"></div>
+          <div id="f218"></div>
+          <div id="f219"></div>
+          <div id="f220"></div>
+          <div id="b21"></div>
+          <div id="b22"></div>
+          <div id="b23"></div>
+          <div id="b24"></div>
+          <div id="b25"></div>
+          <div id="b26"></div>
+          <div id="b27"></div>
+          <div id="b28"></div>
+          <div id="b29"></div>
+          <div id="b210"></div>
+          <div id="b211"></div>
+          <div id="b212"></div>
+          <div id="b213"></div>
+          <div id="b214"></div>
+          <div id="b215"></div>
+          <div id="b216"></div>
+          <div id="b217"></div>
+          <div id="b218"></div>
+          <div id="b219"></div>
+          <div id="b220"></div>
+          
+          <div id="room3">
+            <div id="l31"></div>
+            <div id="l32"></div>
+            <div id="l33"></div>
+            <div id="l34"></div>
+            <div id="l35"></div>
+            <div id="l36"></div>
+            <div id="l37"></div>
+            <div id="l38"></div>
+            <div id="l39"></div>
+            <div id="l310"></div>
+            <div id="l311"></div>
+            <div id="l312"></div>
+            <div id="l313"></div>
+            <div id="l314"></div>
+            <div id="l315"></div>
+            <div id="l316"></div>
+            <div id="l317"></div>
+            <div id="l318"></div>
+            <div id="l319"></div>
+            <div id="l320"></div>
+            <div id="r31"></div>
+            <div id="r32"></div>
+            <div id="r33"></div>
+            <div id="r34"></div>
+            <div id="r35"></div>
+            <div id="r36"></div>
+            <div id="r37"></div>
+            <div id="r38"></div>
+            <div id="r39"></div>
+            <div id="r310"></div>
+            <div id="r311"></div>
+            <div id="r312"></div>
+            <div id="r313"></div>
+            <div id="r314"></div>
+            <div id="r315"></div>
+            <div id="r316"></div>
+            <div id="r317"></div>
+            <div id="r318"></div>
+            <div id="r319"></div>
+            <div id="r320"></div>
+            <div id="f31"></div>
+            <div id="f32"></div>
+            <div id="f33"></div>
+            <div id="f34"></div>
+            <div id="f35"></div>
+            <div id="f36"></div>
+            <div id="f37"></div>
+            <div id="f38"></div>
+            <div id="f39"></div>
+            <div id="f310"></div>
+            <div id="f311"></div>
+            <div id="f312"></div>
+            <div id="f313"></div>
+            <div id="f314"></div>
+            <div id="f315"></div>
+            <div id="f316"></div>
+            <div id="f317"></div>
+            <div id="f318"></div>
+            <div id="f319"></div>
+            <div id="f320"></div>
+            <div id="b31"></div>
+            <div id="b32"></div>
+            <div id="b33"></div>
+            <div id="b34"></div>
+            <div id="b35"></div>
+            <div id="b36"></div>
+            <div id="b37"></div>
+            <div id="b38"></div>
+            <div id="b39"></div>
+            <div id="b310"></div>
+            <div id="b311"></div>
+            <div id="b312"></div>
+            <div id="b313"></div>
+            <div id="b314"></div>
+            <div id="b315"></div>
+            <div id="b316"></div>
+            <div id="b317"></div>
+            <div id="b318"></div>
+            <div id="b319"></div>
+            <div id="b320"></div>          
+          </div>
+
+          <div id="room4">
+            <div id="l41"></div>
+            <div id="l42"></div>
+            <div id="l43"></div>
+            <div id="l44"></div>
+            <div id="l45"></div>
+            <div id="l46"></div>
+            <div id="l47"></div>
+            <div id="l48"></div>
+            <div id="l49"></div>
+            <div id="l410"></div>
+            <div id="l411"></div>
+            <div id="l412"></div>
+            <div id="l413"></div>
+            <div id="l414"></div>
+            <div id="l415"></div>
+            <div id="l416"></div>
+            <div id="l417"></div>
+            <div id="l418"></div>
+            <div id="l419"></div>
+            <div id="l420"></div>
+            <div id="r41"></div>
+            <div id="r42"></div>
+            <div id="r43"></div>
+            <div id="r44"></div>
+            <div id="r45"></div>
+            <div id="r46"></div>
+            <div id="r47"></div>
+            <div id="r48"></div>
+            <div id="r49"></div>
+            <div id="r410"></div>
+            <div id="r411"></div>
+            <div id="r412"></div>
+            <div id="r413"></div>
+            <div id="r414"></div>
+            <div id="r415"></div>
+            <div id="r416"></div>
+            <div id="r417"></div>
+            <div id="r418"></div>
+            <div id="r419"></div>
+            <div id="r420"></div>
+            <div id="f41"></div>
+            <div id="f42"></div>
+            <div id="f43"></div>
+            <div id="f44"></div>
+            <div id="f45"></div>
+            <div id="f46"></div>
+            <div id="f47"></div>
+            <div id="f48"></div>
+            <div id="f49"></div>
+            <div id="f410"></div>
+            <div id="f411"></div>
+            <div id="f412"></div>
+            <div id="f413"></div>
+            <div id="f414"></div>
+            <div id="f415"></div>
+            <div id="f416"></div>
+            <div id="f417"></div>
+            <div id="f418"></div>
+            <div id="f419"></div>
+            <div id="f420"></div>
+            <div id="b41"></div>
+            <div id="b42"></div>
+            <div id="b43"></div>
+            <div id="b44"></div>
+            <div id="b45"></div>
+            <div id="b46"></div>
+            <div id="b47"></div>
+            <div id="b48"></div>
+            <div id="b49"></div>
+            <div id="b410"></div>
+            <div id="b411"></div>
+            <div id="b412"></div>
+            <div id="b413"></div>
+            <div id="b414"></div>
+            <div id="b415"></div>
+            <div id="b416"></div>
+            <div id="b417"></div>
+            <div id="b418"></div>
+            <div id="b419"></div>
+            <div id="b420"></div>          
+          </div>
+
        </div>
       </div>
     </body>

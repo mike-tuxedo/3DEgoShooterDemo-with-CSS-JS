@@ -1,0 +1,390 @@
+
+/** die beinhaltenden elemente werden ausgeblendet wenn sie zu nah am view sind,
+   als wenn man sich an der Wand dreht werden auf einmal Flächen am Rand durchsichtig.
+   um dies zu beheben werden die Wände eines Raums in eine div gekapselt diese wird 
+   weit weg vom view paltziert und die Wände bekommen einen dementsprechenden offset
+   in die gegengesetzte Richtung **/
+   
+#room3{
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translateZ(-100000px) translateX(-2000px);
+}
+
+/** --------------------------WallsHelpers------------------------------------ **/
+
+.wallLeftStandartValues3(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(90deg) translateZ(-1050px) translateX(@translateX - 100000px);
+  position: fixed;
+}
+
+.wallRightStandartValues3(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(270deg) translateZ(-950px) translateX(@translateX + 100000px);
+  position: fixed;
+}
+
+.wallFrontStandartValues3(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(100000px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallBackStandartValues3(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(98000px) translateX(@translateX);
+  position: fixed;
+}
+
+
+//----------------------------Raum1 links
+#l31 {
+  .wallLeftStandartValues3(50px);
+}
+
+#l32 {
+  .wallLeftStandartValues3(150px);
+}
+
+#l33 {
+  .wallLeftStandartValues3(250px);
+}
+
+#l34 {
+  .wallLeftStandartValues3(350px);
+}
+
+#l35 {
+  .wallLeftStandartValues3(450px);
+}
+
+#l36 {
+  .wallLeftStandartValues3(550px);
+}
+
+#l37 {
+  .wallLeftStandartValues3(650px);
+}
+
+#l38 {
+  .wallLeftStandartValues3(750px);
+}
+
+#l39 {
+  .wallLeftStandartValues3(850px);
+}
+
+#l310 {
+  .wallLeftStandartValues3(950px);
+}
+
+#l311 {
+  .wallLeftStandartValues3(1050px);
+}
+
+#l312 {
+  .wallLeftStandartValues3(1150px);
+}
+
+#l313 {
+  .wallLeftStandartValues3(1250px);
+}
+
+#l314 {
+  .wallLeftStandartValues3(1350px);
+}
+
+#l315 {
+  .wallLeftStandartValues3(1450px);
+}
+
+#l316 {
+  .wallLeftStandartValues3(1550px);
+}
+
+#l317 {
+  .wallLeftStandartValues3(1650px);
+}
+
+#l318 {
+  .wallLeftStandartValues3(1750px);
+}
+
+#l319 {
+  .wallLeftStandartValues3(1850px);
+}
+
+#l320 {
+  .wallLeftStandartValues3(1950px);
+}
+
+
+//----------------------------Raum1 vorne
+
+#f31 {
+  .wallFrontStandartValues3(-1000px);
+}
+
+#f32 {
+  .wallFrontStandartValues3(-900px);
+}
+
+#f33 {
+  .wallFrontStandartValues3(-800px);
+}
+
+#f34 {
+  .wallFrontStandartValues3(-700px);
+}
+
+#f35 {
+  .wallFrontStandartValues3(-600px);
+}
+
+#f36 {
+  .wallFrontStandartValues3(-500px);
+}
+
+#f37 {
+  .wallFrontStandartValues3(-400px);
+}
+
+#f38 {
+  .wallFrontStandartValues3(-300px);
+}
+
+#f39 {
+  .wallFrontStandartValues3(-200px);
+}
+
+#f310 {
+  .wallFrontStandartValues3(-100px);
+}
+
+#f311 {
+  .wallFrontStandartValues3(0px);
+}
+
+#f312 {
+  .wallFrontStandartValues3(100px);
+}
+
+#f313 {
+  .wallFrontStandartValues3(200px);
+}
+
+#f314 {
+  .wallFrontStandartValues3(300px);
+}
+
+#f315 {
+  .wallFrontStandartValues3(400px);
+}
+
+#f316 {
+  .wallFrontStandartValues3(500px);
+}
+
+#f317 {
+  .wallFrontStandartValues3(600px);
+}
+
+#f318 {
+  .wallFrontStandartValues3(700px);
+}
+
+#f319 {
+  .wallFrontStandartValues3(800px);
+}
+
+#f320 {
+  .wallFrontStandartValues3(900px);
+}
+//----------------------------Raum1 rechts
+#r31 {
+  .wallRightStandartValues3(-50px);
+}
+
+#r32 {
+  .wallRightStandartValues3(-150px);
+}
+
+#r33 {
+  .wallRightStandartValues3(-250px);
+}
+
+#r34 {
+  .wallRightStandartValues3(-350px);
+}
+
+#r35 {
+  .wallRightStandartValues3(-450px);
+}
+
+#r36 {
+  .wallRightStandartValues3(-550px);
+}
+
+#r37 {
+  .wallRightStandartValues3(-650px);
+}
+
+#r38 {
+  .wallRightStandartValues3(-750px);
+}
+
+#r39 {
+  .wallRightStandartValues3(-850px);
+}
+
+#r310 {
+  .wallRightStandartValues3(-950px);
+}
+
+#r311 {
+  .wallRightStandartValues3(-1050px);
+}
+
+#r312 {
+  .wallRightStandartValues3(-1150px);
+}
+
+#r313 {
+  .wallRightStandartValues3(-1250px);
+}
+
+#r314 {
+  .wallRightStandartValues3(-1350px);
+}
+
+#r315 {
+  .wallRightStandartValues3(-1450px);
+}
+
+#r316 {
+  .wallRightStandartValues3(-1550px);
+}
+
+#r317 {
+  .wallRightStandartValues3(-1650px);
+}
+
+#r318 {
+  .wallRightStandartValues3(-1750px);
+}
+
+#r319 {
+  .wallRightStandartValues3(-1850px);
+}
+
+#r320 {
+  .wallRightStandartValues3(-1950px);
+}
+
+//----------------------------Raum1 hinten
+
+#b31 {
+  .wallBackStandartValues3(-1000px);
+}
+
+#b32 {
+  .wallBackStandartValues3(-900px);
+}
+
+#b33 {
+  .wallBackStandartValues3(-800px);
+}
+
+#b34 {
+  .wallBackStandartValues3(-700px);
+}
+
+#b35 {
+  .wallBackStandartValues3(-600px);
+}
+
+#b36 {
+  .wallBackStandartValues3(-500px);
+}
+
+#b37 {
+  .wallBackStandartValues3(-400px);
+  height: 140px;
+}
+
+#b38 {
+  .wallBackStandartValues3(-300px);
+  height: 140px;
+}
+
+#b39 {
+  .wallBackStandartValues3(-200px);
+  height: 140px;
+}
+
+#b310 {
+  .wallBackStandartValues3(-100px);
+  height: 140px;
+}
+
+#b311 {
+  .wallBackStandartValues3(0px);
+  height: 140px;
+}
+
+#b312 {
+  .wallBackStandartValues3(100px);
+  height: 140px;
+}
+
+#b313 {
+  .wallBackStandartValues3(200px);
+  height: 140px;
+}
+
+#b314 {
+  .wallBackStandartValues3(300px);
+  height: 140px;
+}
+
+#b315 {
+  .wallBackStandartValues3(400px);
+}
+
+#b316 {
+  .wallBackStandartValues3(500px);
+}
+
+#b317 {
+  .wallBackStandartValues3(600px);
+}
+
+#b318 {
+  .wallBackStandartValues3(700px);
+}
+
+#b319 {
+  .wallBackStandartValues3(800px);
+}
+
+#b320 {
+  .wallBackStandartValues3(900px);
+}
+
+

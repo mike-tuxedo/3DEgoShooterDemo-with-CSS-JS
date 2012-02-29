@@ -1,0 +1,379 @@
+
+/** --------------------------WallsHelpers------------------------------------ **/
+
+.wallLeftStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(90deg) translateZ(-3050px) translateX(@translateX + 2000px);
+  position: fixed;
+}
+
+.wallRightStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(270deg) translateZ(-2950px) translateX(@translateX - 2000px);
+  position: fixed;
+}
+
+.wallFrontStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(0px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallBackStandartValues(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(-2000px) translateX(@translateX);
+  position: fixed;
+}
+
+
+//----------------------------Raum1 links
+#l21 {
+  .wallLeftStandartValues(50px);
+}
+
+#l22 {
+  .wallLeftStandartValues(150px);
+}
+
+#l23 {
+  .wallLeftStandartValues(250px);
+}
+
+#l24 {
+  .wallLeftStandartValues(350px);
+}
+
+#l25 {
+  .wallLeftStandartValues(450px);
+}
+
+#l26 {
+  .wallLeftStandartValues(550px);
+}
+
+#l27 {
+  .wallLeftStandartValues(650px);
+}
+
+#l28 {
+  .wallLeftStandartValues(750px);
+}
+
+#l29 {
+  .wallLeftStandartValues(850px);
+}
+
+#l210 {
+  .wallLeftStandartValues(950px);
+}
+
+#l211 {
+  .wallLeftStandartValues(1050px);
+}
+
+#l212 {
+  .wallLeftStandartValues(1150px);
+}
+
+#l213 {
+  .wallLeftStandartValues(1250px);
+}
+
+#l214 {
+  .wallLeftStandartValues(1350px);
+}
+
+#l215 {
+  .wallLeftStandartValues(1450px);
+}
+
+#l216 {
+  .wallLeftStandartValues(1550px);
+}
+
+#l217 {
+  .wallLeftStandartValues(1650px);
+}
+
+#l218 {
+  .wallLeftStandartValues(1750px);
+}
+
+#l219 {
+  .wallLeftStandartValues(1850px);
+}
+
+#l220 {
+  .wallLeftStandartValues(1950px);
+}
+
+
+//----------------------------Raum1 vorne
+
+#f21 {
+  .wallFrontStandartValues(-1000px);
+}
+
+#f22 {
+  .wallFrontStandartValues(-900px);
+}
+
+#f23 {
+  .wallFrontStandartValues(-800px);
+}
+
+#f24 {
+  .wallFrontStandartValues(-700px);
+}
+
+#f25 {
+  .wallFrontStandartValues(-600px);
+}
+
+#f26 {
+  .wallFrontStandartValues(-500px);
+}
+
+#f27 {
+  .wallFrontStandartValues(-400px);
+}
+
+#f28 {
+  .wallFrontStandartValues(-300px);
+}
+
+#f29 {
+  .wallFrontStandartValues(-200px);
+}
+
+#f210 {
+  .wallFrontStandartValues(-100px);
+}
+
+#f211 {
+  .wallFrontStandartValues(0px);
+}
+
+#f212 {
+  .wallFrontStandartValues(100px);
+}
+
+#f213 {
+  .wallFrontStandartValues(200px);
+}
+
+#f214 {
+  .wallFrontStandartValues(300px);
+}
+
+#f215 {
+  .wallFrontStandartValues(400px);
+}
+
+#f216 {
+  .wallFrontStandartValues(500px);
+}
+
+#f217 {
+  .wallFrontStandartValues(600px);
+}
+
+#f218 {
+  .wallFrontStandartValues(700px);
+}
+
+#f219 {
+  .wallFrontStandartValues(800px);
+}
+
+#f220 {
+  .wallFrontStandartValues(900px);
+}
+//----------------------------Raum1 rechts
+#r21 {
+  .wallRightStandartValues(-50px);
+}
+
+#r22 {
+  .wallRightStandartValues(-150px);
+}
+
+#r23 {
+  .wallRightStandartValues(-250px);
+}
+
+#r24 {
+  .wallRightStandartValues(-350px);
+}
+
+#r25 {
+  .wallRightStandartValues(-450px);
+}
+
+#r26 {
+  .wallRightStandartValues(-550px);
+}
+
+#r27 {
+  .wallRightStandartValues(-650px);
+}
+
+#r28 {
+  .wallRightStandartValues(-750px);
+}
+
+#r29 {
+  .wallRightStandartValues(-850px);
+}
+
+#r210 {
+  .wallRightStandartValues(-950px);
+}
+
+#r211 {
+  .wallRightStandartValues(-1050px);
+}
+
+#r212 {
+  .wallRightStandartValues(-1150px);
+}
+
+#r213 {
+  .wallRightStandartValues(-1250px);
+}
+
+#r214 {
+  .wallRightStandartValues(-1350px);
+}
+
+#r215 {
+  .wallRightStandartValues(-1450px);
+}
+
+#r216 {
+  .wallRightStandartValues(-1550px);
+}
+
+#r217 {
+  .wallRightStandartValues(-1650px);
+}
+
+#r218 {
+  .wallRightStandartValues(-1750px);
+}
+
+#r219 {
+  .wallRightStandartValues(-1850px);
+}
+
+#r220 {
+  .wallRightStandartValues(-1950px);
+}
+
+//----------------------------Raum1 hinten
+
+#b21 {
+  .wallBackStandartValues(-1000px);
+}
+
+#b22 {
+  .wallBackStandartValues(-900px);
+}
+
+#b23 {
+  .wallBackStandartValues(-800px);
+}
+
+#b24 {
+  .wallBackStandartValues(-700px);
+}
+
+#b25 {
+  .wallBackStandartValues(-600px);
+}
+
+#b26 {
+  .wallBackStandartValues(-500px);
+}
+
+#b27 {
+  .wallBackStandartValues(-400px);
+  height: 140px;
+}
+
+#b28 {
+  .wallBackStandartValues(-300px);
+  height: 140px;
+}
+
+#b29 {
+  .wallBackStandartValues(-200px);
+  height: 140px;
+}
+
+#b210 {
+  .wallBackStandartValues(-100px);
+  height: 140px;
+}
+
+#b211 {
+  .wallBackStandartValues(0px);
+  height: 140px;
+}
+
+#b212 {
+  .wallBackStandartValues(100px);
+  height: 140px;
+}
+
+#b213 {
+  .wallBackStandartValues(200px);
+  height: 140px;
+}
+
+#b214 {
+  .wallBackStandartValues(300px);
+  height: 140px;
+}
+
+#b215 {
+  .wallBackStandartValues(400px);
+}
+
+#b216 {
+  .wallBackStandartValues(500px);
+}
+
+#b217 {
+  .wallBackStandartValues(600px);
+}
+
+#b218 {
+  .wallBackStandartValues(700px);
+}
+
+#b219 {
+  .wallBackStandartValues(800px);
+}
+
+#b220 {
+  .wallBackStandartValues(900px);
+}
+
+

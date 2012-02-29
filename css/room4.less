@@ -1,0 +1,390 @@
+
+/** die beinhaltenden elemente werden ausgeblendet wenn sie zu nah am view sind,
+   als wenn man sich an der Wand dreht werden auf einmal Flächen am Rand durchsichtig.
+   um dies zu beheben werden die Wände eines Raums in eine div gekapselt diese wird 
+   weit weg vom view paltziert und die Wände bekommen einen dementsprechenden offset
+   in die gegengesetzte Richtung **/
+   
+#room4{
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(270deg) translateZ(-95000px) translateX(-3000px);
+}
+
+/** --------------------------WallsHelpers------------------------------------ **/
+
+.wallLeftStandartValues4(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(90deg) translateZ(-1050px) translateX(@translateX - 100000px);
+  position: fixed;
+}
+
+.wallRightStandartValues4(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform:  rotateY(270deg) translateZ(-950px) translateX(@translateX + 100000px);
+  position: fixed;
+}
+
+.wallFrontStandartValues4(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(100000px) translateX(@translateX);
+  position: fixed;
+}
+
+.wallBackStandartValues4(@translateX: 0px){
+	width: 105px;
+	height: 1000px;
+  background: black;
+	background-image: url(../images/wall3.png);
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translateZ(98000px) translateX(@translateX);
+  position: fixed;
+}
+
+
+//----------------------------Raum1 links
+#l41 {
+  .wallLeftStandartValues4(50px);
+}
+
+#l42 {
+  .wallLeftStandartValues4(150px);
+}
+
+#l43 {
+  .wallLeftStandartValues4(250px);
+}
+
+#l44 {
+  .wallLeftStandartValues4(350px);
+}
+
+#l45 {
+  .wallLeftStandartValues4(450px);
+}
+
+#l46 {
+  .wallLeftStandartValues4(550px);
+}
+
+#l47 {
+  .wallLeftStandartValues4(650px);
+}
+
+#l48 {
+  .wallLeftStandartValues4(750px);
+}
+
+#l49 {
+  .wallLeftStandartValues4(850px);
+}
+
+#l410 {
+  .wallLeftStandartValues4(950px);
+}
+
+#l411 {
+  .wallLeftStandartValues4(1050px);
+}
+
+#l412 {
+  .wallLeftStandartValues4(1150px);
+}
+
+#l413 {
+  .wallLeftStandartValues4(1250px);
+}
+
+#l414 {
+  .wallLeftStandartValues4(1350px);
+}
+
+#l415 {
+  .wallLeftStandartValues4(1450px);
+}
+
+#l416 {
+  .wallLeftStandartValues4(1550px);
+}
+
+#l417 {
+  .wallLeftStandartValues4(1650px);
+}
+
+#l418 {
+  .wallLeftStandartValues4(1750px);
+}
+
+#l419 {
+  .wallLeftStandartValues4(1850px);
+}
+
+#l420 {
+  .wallLeftStandartValues4(1950px);
+}
+
+
+//----------------------------Raum1 vorne
+
+#f41 {
+  .wallFrontStandartValues4(-1000px);
+}
+
+#f42 {
+  .wallFrontStandartValues4(-900px);
+}
+
+#f43 {
+  .wallFrontStandartValues4(-800px);
+}
+
+#f44 {
+  .wallFrontStandartValues4(-700px);
+}
+
+#f45 {
+  .wallFrontStandartValues4(-600px);
+}
+
+#f46 {
+  .wallFrontStandartValues4(-500px);
+}
+
+#f47 {
+  .wallFrontStandartValues4(-400px);
+}
+
+#f48 {
+  .wallFrontStandartValues4(-300px);
+}
+
+#f49 {
+  .wallFrontStandartValues4(-200px);
+}
+
+#f410 {
+  .wallFrontStandartValues4(-100px);
+}
+
+#f411 {
+  .wallFrontStandartValues4(0px);
+}
+
+#f412 {
+  .wallFrontStandartValues4(100px);
+}
+
+#f413 {
+  .wallFrontStandartValues4(200px);
+}
+
+#f414 {
+  .wallFrontStandartValues4(300px);
+}
+
+#f415 {
+  .wallFrontStandartValues4(400px);
+}
+
+#f416 {
+  .wallFrontStandartValues4(500px);
+}
+
+#f417 {
+  .wallFrontStandartValues4(600px);
+}
+
+#f418 {
+  .wallFrontStandartValues4(700px);
+}
+
+#f419 {
+  .wallFrontStandartValues4(800px);
+}
+
+#f420 {
+  .wallFrontStandartValues4(900px);
+}
+//----------------------------Raum1 rechts
+#r41 {
+  .wallRightStandartValues4(-50px);
+}
+
+#r42 {
+  .wallRightStandartValues4(-150px);
+}
+
+#r43 {
+  .wallRightStandartValues4(-250px);
+}
+
+#r44 {
+  .wallRightStandartValues4(-350px);
+}
+
+#r45 {
+  .wallRightStandartValues4(-450px);
+}
+
+#r46 {
+  .wallRightStandartValues4(-550px);
+}
+
+#r47 {
+  .wallRightStandartValues4(-650px);
+}
+
+#r48 {
+  .wallRightStandartValues4(-750px);
+}
+
+#r49 {
+  .wallRightStandartValues4(-850px);
+}
+
+#r410 {
+  .wallRightStandartValues4(-950px);
+}
+
+#r411 {
+  .wallRightStandartValues4(-1050px);
+}
+
+#r412 {
+  .wallRightStandartValues4(-1150px);
+}
+
+#r413 {
+  .wallRightStandartValues4(-1250px);
+}
+
+#r414 {
+  .wallRightStandartValues4(-1350px);
+}
+
+#r415 {
+  .wallRightStandartValues4(-1450px);
+}
+
+#r416 {
+  .wallRightStandartValues4(-1550px);
+}
+
+#r417 {
+  .wallRightStandartValues4(-1650px);
+}
+
+#r418 {
+  .wallRightStandartValues4(-1750px);
+}
+
+#r419 {
+  .wallRightStandartValues4(-1850px);
+}
+
+#r420 {
+  .wallRightStandartValues4(-1950px);
+}
+
+//----------------------------Raum1 hinten
+
+#b41 {
+  .wallBackStandartValues4(-1000px);
+}
+
+#b42 {
+  .wallBackStandartValues4(-900px);
+}
+
+#b43 {
+  .wallBackStandartValues4(-800px);
+}
+
+#b44 {
+  .wallBackStandartValues4(-700px);
+}
+
+#b45 {
+  .wallBackStandartValues4(-600px);
+}
+
+#b46 {
+  .wallBackStandartValues4(-500px);
+}
+
+#b47 {
+  .wallBackStandartValues4(-400px);
+  height: 140px;
+}
+
+#b48 {
+  .wallBackStandartValues4(-300px);
+  height: 140px;
+}
+
+#b49 {
+  .wallBackStandartValues4(-200px);
+  height: 140px;
+}
+
+#b410 {
+  .wallBackStandartValues4(-100px);
+  height: 140px;
+}
+
+#b411 {
+  .wallBackStandartValues4(0px);
+  height: 140px;
+}
+
+#b412 {
+  .wallBackStandartValues4(100px);
+  height: 140px;
+}
+
+#b413 {
+  .wallBackStandartValues4(200px);
+  height: 140px;
+}
+
+#b414 {
+  .wallBackStandartValues4(300px);
+  height: 140px;
+}
+
+#b415 {
+  .wallBackStandartValues4(400px);
+}
+
+#b416 {
+  .wallBackStandartValues4(500px);
+}
+
+#b417 {
+  .wallBackStandartValues4(600px);
+}
+
+#b418 {
+  .wallBackStandartValues4(700px);
+}
+
+#b419 {
+  .wallBackStandartValues4(800px);
+}
+
+#b420 {
+  .wallBackStandartValues4(900px);
+}
+
+
