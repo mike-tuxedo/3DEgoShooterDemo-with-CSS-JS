@@ -8,7 +8,7 @@ var rotationVal = 0;
 var stepsInX = 0;
 var stepsInZ = 0;
 var placeX = 0;
-var placeZ = 3100;
+var placeZ = 3200;
 var mapX;
 var mapZ;
 var levelHeight;
@@ -55,7 +55,11 @@ $(document).ready(function(){
 		}
     else if(event.which == 32){
       if(map[mapZ+1][mapX] == 2 || map[mapZ-1][mapX] == 2 || map[mapZ][mapX+1] == 2 || map[mapZ][mapX-1] == 2)
-        openDoor(1);
+        openDoor(2);
+      else if(map[mapZ+1][mapX] == 3 || map[mapZ-1][mapX] == 3 || map[mapZ][mapX+1] == 3 || map[mapZ][mapX-1] == 3)
+        openDoor(3);
+      else if(map[mapZ+1][mapX] == 4 || map[mapZ-1][mapX] == 4 || map[mapZ][mapX+1] == 4 || map[mapZ][mapX-1] == 4)
+        openDoor(4);
     }
 	});
 
@@ -147,5 +151,4 @@ function collisionDetection(){
     move();
   }
 }
-
 
