@@ -9,7 +9,7 @@ html{
 #bord{
 	position: fixed;
 	width: auto;
-  background-color: rgba(0,0,0,0.75);
+  //background-color: rgba(0,0,0,0.75);
   padding: 15px;
   color: #fdfdfd;
 	font-size: 50px;
@@ -18,8 +18,13 @@ html{
 }
 
 #top{
-position: fixed;
-background: #333333;
+position: absolute;
+background: #666666;
+//background-image: url(../images/top2.jpeg);
+background:-webkit-gradient(linear, 10% 100%, 10% 21%, from(#596DFF), to(#FFFFFF));
+background-size: auto 100%;
+background-position: 0% 0%;
+margin-top: 0px;
 width: 100%;
 height: 50%;
 }
@@ -27,6 +32,8 @@ height: 50%;
 #floor{
 position: fixed;
 background: #888888;
+background-size: auto 100%;
+//background-image: url(../images/gras2.jpeg);
 width: 100%;
 height: 50%;
 top: 50%;
@@ -47,7 +54,7 @@ top: 50%;
 #level1 {border: 2px solid green;
 	position: relative;
 	margin: 700px 50%;
-  height: 1px;
+	height: 1px;
 	width: 1px;
   //opacity: 0.5;
 
@@ -55,6 +62,7 @@ top: 50%;
   -webkit-transform-origin: 50% 50% 3000px;
   -webkit-transform: translateZ(3200px);
 }
+
 
 //-----------------------------doors---------------
 

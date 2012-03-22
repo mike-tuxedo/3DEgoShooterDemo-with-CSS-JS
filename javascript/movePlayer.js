@@ -12,6 +12,7 @@ var placeZ = 3200;
 var mapX;
 var mapZ;
 var levelHeight;
+var backgroundPos = 5000;
 
 $(document).ready(function(){
   //correct the viewport for near every windowsize
@@ -38,7 +39,7 @@ $(document).ready(function(){
 		}
 		else if(event.which == 39){
 			clearInterval(t);
-      grad = degSpeed;
+			grad = degSpeed;
 			t = setInterval('rotation()', 10);
 		}
 		else if(event.which == 38){
@@ -75,10 +76,14 @@ function rotation()
   if(rotationVal >= 360 && rotationVal < 362) rotationVal = 0;
   else if(rotationVal <= -1 && rotationVal > -3) rotationVal = 360 + grad;
   
+  backgroundPos += grad*30;
   rotationVal += grad;
   moveDirectionXZ();
   showValues();
+  
 	$('#level1').css('-webkit-transform', 'rotateY(' + rotationVal + 'deg) translate3d(' + placeX + 'px, 0px,' + placeZ + 'px)');
+  $('#top').css('background-position', -backgroundPos + 'px 0px');
+ // $('#floor').css('background-position', -backgroundPos*3 + 'px 0%');
 }
 
 //move the playerposition forward or backword
@@ -119,7 +124,7 @@ function moveDirectionXZ(){
 
 //write information on the Gamescreen
 function showValues(){
-  $('#bord').html("viewportHeight: " + $(document).height() + "</br>placeZ: " + placeZ + " stepsInZ: " + stepsInZ + "</br>placeX: " + placeX + " stepsInX: " + stepsInX + "</br>mapX: " + mapX + " mapZ: " + mapZ + "</br>Angle: " + rotationVal);
+  $('#bord').html("viewportHeight: " + $(document).height() + "</br>placeZ: " + placeZ + " stepsInZ: " + stepsInZ + "</br>placeX: " + placeX + " stepsInX: " + stepsInX + "</br>mapX: " + mapX + " mapZ: " + mapZ + "</br>Angle: " + rotationVal + "</br>BG_xPos: " +  backgroundPos);
 }
 
 //collisiondetection
