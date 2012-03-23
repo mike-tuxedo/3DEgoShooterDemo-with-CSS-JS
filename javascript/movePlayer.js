@@ -1,6 +1,7 @@
 var t;
 var s;
-var degSpeed = 2;
+var m;
+var degSpeed = 1;
 var grad;
 var moveSpeed = 30;
 var step = 40;
@@ -29,26 +30,26 @@ $(document).ready(function(){
     $('#game').css('-webkit-transform','scale(' + gameScale + ')');
   });
   
+
   //basicly forwarding keyactions from user to the right function and set moving- and rotationdirection
 	$(document).keydown(function(event){
-    
-		if(event.which == 37){
+		if(event.which == 65){
 			clearInterval(t);
 			grad = -degSpeed;
 			t = setInterval('rotation()', 10);
 		}
-		else if(event.which == 39){
+		else if(event.which == 68){
 			clearInterval(t);
 			grad = degSpeed;
 			t = setInterval('rotation()', 10);
 		}
-		else if(event.which == 38){
+		else if(event.which == 87){
 			clearInterval(s);
       step = moveSpeed;
       moveDirectionXZ();
 			s = setInterval('collisionDetection()', 10);		
 		}
-		else if(event.which == 40){
+		else if(event.which == 83){
 			clearInterval(s);
 			step = -moveSpeed;
       moveDirectionXZ();
@@ -65,12 +66,27 @@ $(document).ready(function(){
 	});
 
 	$(document).keyup(function(event){
-    if(event.which == 38 || event.which == 40) clearInterval(s);
+		if(event.which == 87 || event.which == 83) clearInterval(s);
 		else clearInterval(t);
 	});
+	
+
+	$('#game').mousemove(function(e){
+		
+		if((e.clientX - $(window).width()/2) > 500) grad = degSpeed;
+		else if((e.clientX - $(window).width()/2) < -500) grad = -degSpeed;
+		else if((e.clientX - $(window).width()/2)/500 < 0.3) grad = 0;
+		else grad = (e.clientX - $(window).width()/2)/500;
+		
+		
+		clearInterval(t);
+		t = setInterval('rotation()', 5);
+	});
+
+
 });
 
-//rotatet the players viewport
+	//rotatet the players viewport
 function rotation()
 {
   if(rotationVal >= 360 && rotationVal < 362) rotationVal = 0;
@@ -80,9 +96,10 @@ function rotation()
   rotationVal += grad;
   moveDirectionXZ();
   showValues();
+
   
 	$('#level1').css('-webkit-transform', 'rotateY(' + rotationVal + 'deg) translate3d(' + placeX + 'px, 0px,' + placeZ + 'px)');
-  $('#top').css('background-position', -backgroundPos + 'px 0px');
+  //$('#top').css('background-position', -backgroundPos + 'px 0px');
  // $('#floor').css('background-position', -backgroundPos*3 + 'px 0%');
 }
 

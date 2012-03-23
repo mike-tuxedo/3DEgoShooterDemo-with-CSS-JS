@@ -5,7 +5,7 @@ var j = 0;
 
 function openDoor(i){
 
-  if(i == 1)
+  if(i == 2)
   {
     $('#door1').animate({left: '-=' + moveDoor}, 1000, 'easeOutSine',function() {});
     setTimeout('closeDoor()', 3000);
